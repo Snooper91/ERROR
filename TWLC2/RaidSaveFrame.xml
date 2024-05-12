@@ -1,0 +1,131 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+    <Script file="RaidSaveFrame.lua"/>
+
+    <Frame name="RSWindow" hidden="true" toplevel="true"
+           parent="RaidFrame" enableMouse="true">
+    <Size>
+        <AbsDimension x="205" y="75"/>
+    </Size>
+    <Anchors>
+        <Anchor point="BOTTOMLEFT" relativeTo="RaidFrame" relativePoint="BOTTOMRIGHT">
+            <Offset x="-30" y="87"/>
+        </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+              edgeFile="Interface\addons\TWLC2\images\border-azer"
+              tile="false">
+        <EdgeSize>
+            <AbsValue val="20"/>
+        </EdgeSize>
+        <TileSize>
+            <AbsValue val="1"/>
+        </TileSize>
+        <BackgroundInsets>
+            <AbsInset left="5" right="5" top="5" bottom="5"/>
+        </BackgroundInsets>
+    </Backdrop>
+    <Layers>
+
+    </Layers>
+
+        <Frames>
+
+            <Button name="$parentSaveNormal" framstrata="HIGH" inherits="UIPanelButtonTemplate" hidden="false"
+                    text="Save Normal">
+                <NormalTexture inherits="TWLCButtonNormal"/>
+                <PushedTexture inherits="TWLCButtonPushed"/>
+                <DisabledTexture inherits="TWLCButtonDisabled"/>
+                <HighlightTexture inherits="TWLCButtonHighlight"/>
+                <Size>
+                    <AbsDimension x="80" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="20" y="-15"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        RSSave_OnClick('Normal');
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentLoadNormal" framstrata="HIGH" inherits="UIPanelButtonTemplate" hidden="false"
+                    text="Load Normal">
+                <NormalTexture inherits="TWLCButtonNormal"/>
+                <PushedTexture inherits="TWLCButtonPushed"/>
+                <DisabledTexture inherits="TWLCButtonDisabled"/>
+                <HighlightTexture inherits="TWLCButtonHighlight"/>
+                <Size>
+                    <AbsDimension x="80" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="105" y="-15"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        RSLoad_OnClick('Normal');
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentSaveCT" framstrata="HIGH" inherits="UIPanelButtonTemplate" hidden="false"
+                    text="Save C'thun">
+                <NormalTexture inherits="TWLCButtonNormal"/>
+                <PushedTexture inherits="TWLCButtonPushed"/>
+                <DisabledTexture inherits="TWLCButtonDisabled"/>
+                <HighlightTexture inherits="TWLCButtonHighlight"/>
+                <Size>
+                    <AbsDimension x="80" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="20" y="-40"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        RSSave_OnClick('Cthun');
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+            <Button name="$parentLoadCT" framstrata="HIGH" inherits="UIPanelButtonTemplate" hidden="false"
+                    text="Load C'thun">
+                <NormalTexture inherits="TWLCButtonNormal"/>
+                <PushedTexture inherits="TWLCButtonPushed"/>
+                <DisabledTexture inherits="TWLCButtonDisabled"/>
+                <HighlightTexture inherits="TWLCButtonHighlight"/>
+                <Size>
+                    <AbsDimension x="80" y="20"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="105" y="-40"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        RSLoad_OnClick('Cthun');
+                    </OnClick>
+                </Scripts>
+            </Button>
+
+        </Frames>
+    </Frame>
+
+
+
+</Ui>
